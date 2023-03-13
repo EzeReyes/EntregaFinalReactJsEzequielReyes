@@ -1,0 +1,43 @@
+.btnContainer {
+    display:flex;
+    margin: 3rem 0;
+    gap: 1rem;
+    align-items: center;
+    justify-content: end;
+}
+
+.btn {
+    cursor:pointer;
+    width: 10rem;
+    border-radius: 10px;
+    font-size: large;
+    box-shadow: 0px 0px 10px white;
+}
+
+.containerProducts {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.elementsContainer {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: white 10px solid;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.buttonComprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}

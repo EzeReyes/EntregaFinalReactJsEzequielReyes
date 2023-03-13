@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+
+.App-Body {
+  background: radial-gradient(#9198e5,black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: rgb(244, 248, 245);
+}
+
+
+.header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to left,#9198e5,black);
+  color: white;
+}
+
+.nav {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+background-color: #ff0d16;
+width: -webkit-fill-available;
+}
+

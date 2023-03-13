@@ -1,0 +1,33 @@
+.cardProducts {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardMedia {
+    box-shadow: 0px 5px 10px #7e1111;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailButton {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 30%;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.detailButton:hover {
+    border: 1px solid #7e1111;
+}
+
