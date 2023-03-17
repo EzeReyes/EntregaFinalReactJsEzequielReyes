@@ -7,7 +7,7 @@ import FormBuy from "../FormBuy/FormBuy";
 
 const Cart = () => {
 
-let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear } = useContext(cartContext);
+let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finalizarCompra } = useContext(cartContext);
 
 
     return (
@@ -36,6 +36,7 @@ let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear } = useC
     <div className="containerFinal">
         <p>TOTAL: {total}</p>
         <button onClick={clear}>BORRAR TODO</button>
+        <button onClick={finalizarCompra(FormBuy)}>FINALIZAR</button>
     </div>
     <div className="formulario">
     <FormBuy/>

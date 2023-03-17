@@ -14,7 +14,11 @@ export const ItemsContext = createContext();
 
 export const ItemsProvider = ({ children }) => {
 
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
 useEffect (() => {
+  setIsLoading(true);
   const getProducts = async () => {
     const q = query(collection (db, "products"));
     const querySnapshot = await getDocs (q);
@@ -25,24 +29,20 @@ useEffect (() => {
     })
   }
   getProducts();
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 1200);
 },[]);
 
+  
 
-
-// eslint-disable-next-line
-
-  const [items, setItems] = useState([]);
-
-  // const [cart, setCart] = useState([]);
-
-  // const productInCart = (id) => cart.find(product => product.id === id) ? true : false;
   
   const foo = () => {
     alert(`Cantidad de items en nuestro carrito: ${items.length}`);
   };
 
   return (
-    <ItemsContext.Provider value={{query, collection, getDocs, db, where, items, setItems, foo}}>
+    <ItemsContext.Provider value={{query, collection, getDocs, db, where, items, setItems, foo, isLoading, setIsLoading}}>
       {children}
     </ItemsContext.Provider>
   );
