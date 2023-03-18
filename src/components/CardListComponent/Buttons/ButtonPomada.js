@@ -19,7 +19,7 @@ useEffect (() => {
         })
     }
     getProducts();
-},[]);
+},[collection, db, getDocs, query, where]);
 
 return (<button className="btn" onClick={() => setItems(pomada) }>Pomadas</button>)}
 

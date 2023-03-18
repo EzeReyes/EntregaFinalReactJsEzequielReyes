@@ -42,23 +42,23 @@ const FormBuy = () => {
     <div className="ContainerPrincipal">
       <h1>Finalizar Compra</h1>
       <form className="FormContainer" onSubmit={handleOnSubmit}>
-        <TextField
+        <TextField className="TextField"
           placeholder="Ingrese su nombre"
-          style={{ margin: 10, width: 400 }}
+          style={{ margin: 10, width: 400, color:"white" }}
           name="name"
           value={values.name}
           onChange={handleOnChange}
         />
-        <TextField
+        <TextField className="TextField"
           placeholder="Ingrese su apellido"
-          style={{ margin: 10, width: 400 }}
+          style={{ margin: 10, width: 400, color: 'success.main' }}
           name="lastName"
           value={values.lastName}
           onChange={handleOnChange}
         />
-        <TextField
+        <TextField className="TextField"
           placeholder="Ingrese su email"
-          style={{ margin: 10, width: 400 }}
+          style={{ margin: 10, width: 400, color:"white" }}
           name="email"
           value={values.email}
           onChange={handleOnChange}

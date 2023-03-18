@@ -7,11 +7,6 @@ const ButtonCera = () => {
 const { setItems, query, collection, db, getDocs, where } = useContext(ItemsContext);
     
 const [cera, setCera] = useState([]);
-// useEffect(() => {
-//     fetch(`https://63c761b4dcdc478e15d3f6f8.mockapi.io/producto?tipo=cera`)
-//     .then(response => response.json())
-//     .then(json => setCera(json))
-// },[]);
 
 useEffect (() => {
     const getProducts = async () => {
@@ -19,7 +14,6 @@ useEffect (() => {
         const querySnapshot = await getDocs (q);
         const docs = [];
         querySnapshot.forEach((doc) => {
-        // console.log(doc.id, "=>" , doc.data ());
         docs.push({ ...doc.data(), id: doc.id });
         setCera(docs)
         })
