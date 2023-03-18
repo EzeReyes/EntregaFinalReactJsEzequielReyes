@@ -64,3 +64,7 @@ h5{
     justify-content: center;
     height: 20rem;
 }
+
+.btnFinalizar{
+    display: none;
+}

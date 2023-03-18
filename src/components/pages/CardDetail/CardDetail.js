@@ -8,23 +8,27 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { cartContext } from "../../../cartContext";
-// import { ItemsContext } from "../../../itemContext";
+import Spinner from "../../Spinner/Spinner";
+
 import { db } from "../../../Firebase/Firebase";
 import {
-  collection,
-  query,
-  getDocs,
-  where,
-  documentId,
+    collection,
+    query,
+    getDocs,
+    where,
+    documentId,
 } from "firebase/firestore";
+import { ItemsContext } from "../../../itemContext";
 
 const CardDetail = () => 
 {
 const [user, setUser] = useState ([]);
+const {isLoading, setIsLoading} = useContext(ItemsContext)
 const { agregarProductosAlCarrito, Toast} = useContext(cartContext);
 let { id } = useParams();
 
         useEffect (() => {
+            setIsLoading(true);
             const getProducts = async () => {
                 const q = query(collection (db, "products"), where(documentId(), "==", id));
                 const querySnapshot = await getDocs (q);
@@ -35,11 +39,19 @@ let { id } = useParams();
                 })
             }
             getProducts();
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 1200);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         },[id]);
 
         // FUNCION QUE SE UTILIZA PARA RENDERIZAR LA CANTIDAD DE PRODUCTOS A RESTAR ANTES DE EFECTUAR LA COMPRA
 
-    return (user.map((data) => { return (
+    return (user.map((data) => { return ( 
+        isLoading ? ( <div key={data.id} className="Spinner">
+        <Spinner/>
+        </div>
+        ) : 
         <div key={data.id}>
         <h1>Detalle del producto seleccionado:</h1>
     <div className="Container">

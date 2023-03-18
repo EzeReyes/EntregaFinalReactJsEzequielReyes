@@ -38,7 +38,7 @@ useEffect (() => {
 
   
   const foo = () => {
-    alert(`Cantidad de items en nuestro carrito: ${items.length}`);
+    alert(`Cantidad de items en el carrito es: ${items.length}`);
   };
 
   return (

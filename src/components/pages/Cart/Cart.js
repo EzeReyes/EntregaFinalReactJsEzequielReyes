@@ -2,13 +2,10 @@ import {useContext} from "react";
 import "./style.css";
 import { cartContext } from "../../../cartContext";
 import image from "./eliminar.png";
-import FormBuy from "../FormBuy/FormBuy";
-
 
 const Cart = () => {
 
 let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finalizarCompra } = useContext(cartContext);
-
 
     return (
         <>
@@ -35,11 +32,10 @@ let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finaliz
     </div>
     <div className="containerFinal">
         <p>TOTAL: {total}</p>
-        <button onClick={clear}>BORRAR TODO</button>
-        <button onClick={finalizarCompra(FormBuy)}>FINALIZAR</button>
-    </div>
-    <div className="formulario">
-    <FormBuy/>
+        <button onClick={clear} >BORRAR TODO</button>
+        {finalizarCompra()}
+        <div>
+        </div>
     </div>
     </>
     )

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { cartContext } from "../../../cartContext";
 
 // Firebase
 import { db } from "../../../Firebase/Firebase";
@@ -9,25 +10,17 @@ import MessageSuccess from "../../MessageSuccess/MessageSuccess";
 import "./FormBuy.css";
 
 import TextField from "@mui/material/TextField";
-
-const styles = {
-  containerShop: {
-    textAlign: "center",
-    paddingTop: 20,
-  },
-};
-
 const initialState = {
   name: "",
   lastName: "",
-  city: "",
+  email: "",
 };
 
 const FormBuy = () => {
   const [values, setValues] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState("");
 
-  // console.log(purchaseID);
+  let {clear} = useContext(cartContext)
 
   const handleOnChange = (e) => {
     const { value, name } = e.target;
@@ -46,33 +39,33 @@ const FormBuy = () => {
   };
 
   return (
-    <div style={styles.containerShop}>
+    <div className="ContainerPrincipal">
       <h1>Finalizar Compra</h1>
       <form className="FormContainer" onSubmit={handleOnSubmit}>
         <TextField
-          placeholder="Name"
+          placeholder="Ingrese su nombre"
           style={{ margin: 10, width: 400 }}
           name="name"
           value={values.name}
           onChange={handleOnChange}
         />
         <TextField
-          placeholder="Last Name"
+          placeholder="Ingrese su apellido"
           style={{ margin: 10, width: 400 }}
           name="lastName"
           value={values.lastName}
           onChange={handleOnChange}
         />
         <TextField
-          placeholder="email"
+          placeholder="Ingrese su email"
           style={{ margin: 10, width: 400 }}
           name="email"
-          value={values.city}
+          value={values.email}
           onChange={handleOnChange}
         />
-        <button className="btnASendAction">Send</button>
+        <button className="btnASendAction" onClick={()=> clear()}>Send</button>
       </form>
-      {purchaseID ? <MessageSuccess purchaseID={purchaseID} /> : null}
+      {purchaseID ?<MessageSuccess purchaseID={purchaseID}/> : null}
     </div>
   );
 };

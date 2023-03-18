@@ -17,6 +17,7 @@ import Footer from "./components/Footer/Footer";
 import Cart from "./components/pages/Cart/Cart";
 import { ItemsProvider } from "./itemContext";
 import { ItemsCartProvider } from "./cartContext";
+import FinishBuy from "./components/pages/Finish/FinishBuy";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/detail/:id" element={<CardDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/FinishBuy" element={<FinishBuy/>}/>
       </Routes>
       <Footer/>
       </div>

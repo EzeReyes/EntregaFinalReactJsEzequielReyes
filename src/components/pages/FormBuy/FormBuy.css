@@ -1,5 +1,12 @@
+.ContainerPrincipal {
+	display: flex;
+	/* background-image: url(./3.jpg);
+	width: 100vw;
+	height: 30rem; */
+}
+
 .FormContainer {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;

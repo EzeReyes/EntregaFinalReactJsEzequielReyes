@@ -1,6 +1,6 @@
 import { useState, createContext } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import FormBuy from "./components/pages/FormBuy/FormBuy";
+import { Link } from "react-router-dom";
 
 export const cartContext = createContext();
 
@@ -52,11 +52,8 @@ const counterCart = cart.reduce((prev, next) => prev + next.cantidad, 0);
 const precioPorCantidad = cart.map(item => ({precio: item.precio * item.cantidad}));   
 const total = precioPorCantidad.reduce((prev, next) => prev + next.precio, 0);
 
-// ESTA FUNCIÓN HABILITA FORMULARIO PARA FINALIZAR COMPRA
-const finalizarCompra = (f) => { return(
-  cart === [] ? null : FormBuy
-  )
-}
+// ESTA FUNCIÓN HABILITA EL FORMULARIO PARA FINALIZAR COMPRA
+const finalizarCompra = () =>  cart.length===0 ? null : <Link to="/FinishBuy">FINALICE SU COMPRA</Link> 
 
 return (
     <cartContext.Provider value={{  cart, setCart, finalizarCompra, agregarProductosAlCarrito, Toast, restar, counterCart, total, clear, removeItem}}>
