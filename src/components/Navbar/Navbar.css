@@ -1,0 +1,11 @@
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #dbff0d54;
+    width: -webkit-fill-available;
+    height: 6rem;
+    padding: 1rem 0;
+    }

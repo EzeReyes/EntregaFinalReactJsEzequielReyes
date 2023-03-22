@@ -7,17 +7,19 @@ import Home from "./components/pages/Home/Home";
 import Contact from "./components/pages/Contact/Contact";
 import About from "./components/pages/About/About";
 import CardDetail from "./components/pages/CardDetail/CardDetail";
+import FinishBuy from "./components/pages/Finish/FinishBuy";
+import Cart from "./components/pages/Cart/Cart";
+import Error from "./components/pages/Error/Error";
 
 
 // COMPONENTS
 import "./App.css";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar/Navbar"
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Cart from "./components/pages/Cart/Cart";
 import { ItemsProvider } from "./itemContext";
 import { ItemsCartProvider } from "./cartContext";
-import FinishBuy from "./components/pages/Finish/FinishBuy";
+
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
         <Route path="/detail/:id" element={<CardDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/FinishBuy" element={<FinishBuy/>}/>
+        <Route path="*" element={<Error/>} />
       </Routes>
       <Footer/>
       </div>

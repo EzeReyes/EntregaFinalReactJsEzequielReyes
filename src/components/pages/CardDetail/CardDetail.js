@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 import { useParams } from "react-router-dom";
-import "./style.css";
+import "./CardDetail.css";
 import { CardContent } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';

@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left,#5c5d6b,black);
+    color: white;
+    height: 10rem;
+}

@@ -18,6 +18,7 @@
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     gap: 5rem;
+    justify-content: center;
 }
 
 .elementsContainer {
