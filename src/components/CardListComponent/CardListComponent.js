@@ -33,7 +33,6 @@ card.map ((user) => {
 
 return (
     <>
-    <h1>Abuelo Mario, productos de barbería</h1>
     <div className="btnContainer">
     {/* <ButtonTodos/>
         <ButtonCera/>

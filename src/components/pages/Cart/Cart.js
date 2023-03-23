@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import "./Cart.css";
+import "./cart.css";
 import { cartContext } from "../../../cartContext";
 import image from "./eliminar.png";
 
@@ -10,7 +10,7 @@ let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finaliz
     return (
         <>
     <h2>Productos seleccionados:</h2>
-    <div className="containerFlex1">
+    <div className="containerFl">
     <p className="titulos">Producto</p>
     <p className="titulos">Precio por unidad</p>
     <p className="titulos">Cantidad</p>
@@ -19,13 +19,17 @@ let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finaliz
     cart.map ((producto) => { 
     return (
     <div className="containerFlex" key={producto.id}>
+            <div className="producto">
             <h5 className="productList">{producto.nombre}</h5>
             <img className="img" src={producto.img} alt={producto.nombre}/>
+            </div>
+            <div className="precioXUnidad">
             <p className="productList">{producto.precio}</p>
+            </div>
             <div className="container">
-            <button className="buttonComprar" onClick={ () => `${agregarProductosAlCarrito(producto)}`}>+</button>
+            <button className="sumarRestar" onClick={ () => `${agregarProductosAlCarrito(producto)}`}>+</button>
             <p className="cantidad">{producto.cantidad}</p>
-            <button className="buttonComprar" onClick={ () => `${restar(producto)}`}>-</button>            
+            <button className="sumarRestar" onClick={ () => `${restar(producto)}`}>-</button>            
             </div>
             <img className="imgDelete" src={image} alt="" onClick={() => `${removeItem(producto.id)}`}/>
     </div>)})    }

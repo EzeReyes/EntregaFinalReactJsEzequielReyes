@@ -1,0 +1,40 @@
+.gridAbout {
+    display: grid;
+    grid-template: 1fr / 20rem 20rem 20rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7rem;
+}
+
+.imgSize {
+    height: 300px;
+    width: auto;
+    border-radius: 1rem;
+}
+
+
+
+.aboutTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+}
+
+.quienes {
+    font-size: 5rem;
+}
+
+.parrafo {
+    display: flex;
+    margin: 5rem 2rem;
+    align-items: center;
+}
+
+.secondTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}

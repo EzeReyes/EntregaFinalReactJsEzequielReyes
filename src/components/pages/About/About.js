@@ -1,12 +1,11 @@
 import React from "react";
-import Info from "../../Info";
+import Info from "../../Info/Info";
 import "./About.css"
 
 const About = () => 
 {
     return (
     <div>
-        <h1>About</h1>
         <Info/>
     </div>
     )

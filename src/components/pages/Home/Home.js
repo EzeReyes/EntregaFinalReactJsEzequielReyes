@@ -7,8 +7,9 @@ const Home = () =>
 {
     return (
         <>
+        <h1 className="Abuelo">Abuelo Mario, productos de barbería</h1>
         <Carousel/>
-        <CardListComponent greeting="Bienvenido" className="ItemListContainer"/>
+        <CardListComponent className="ItemListContainer"/>
         <NetworkBanner/>
     </>
     )
