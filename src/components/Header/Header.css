@@ -8,3 +8,9 @@
     color: white;
     height: 10rem;
 }
+
+.headerTitulo { 
+text-shadow: 2px 2px 20px white;
+font-weight: 700;
+font-size: 4rem;
+}

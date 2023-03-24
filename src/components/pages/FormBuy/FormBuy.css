@@ -1,5 +1,9 @@
-.ContainerPrincipal {
+.FormTitulo {
 	display: flex;
+	align-items: center;
+	justify-content: left;
+	margin: 3rem;
+	font-size: 2rem;
 }
 
 .FormContainer {

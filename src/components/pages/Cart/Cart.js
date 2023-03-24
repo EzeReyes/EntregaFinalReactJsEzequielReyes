@@ -9,7 +9,7 @@ let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finaliz
 
     return (
         <>
-    <h2>Productos seleccionados:</h2>
+    <h2 className="prodSel">Productos seleccionados:</h2>
     <div className="containerFl">
     <p className="titulos">Producto</p>
     <p className="titulos">Precio por unidad</p>
@@ -36,7 +36,7 @@ let { cart, agregarProductosAlCarrito, restar, total, removeItem, clear, finaliz
     </div>
     <div className="containerFinal">
         <p>TOTAL: {total}</p>
-        <button onClick={clear} >BORRAR TODO</button>
+        <button className="borrarTodo" onClick={clear} >BORRAR TODO</button>
         {finalizarCompra()}
         <div>
         </div>

@@ -48,6 +48,7 @@ const removeItem = (id) => setCart(cart.filter(product => product.id !== id));
 //ESTA FUNCIÓN SUMA LA CANTIDAD DE PRODUCTOS PARA EL COUNTERCART
 const counterCart = cart.reduce((prev, next) => prev + next.cantidad, 0);
 
+
 // ESTA FUNCIÓN CALCULA EL PRECIO TOTAL
 const precioPorCantidad = cart.map(item => ({precio: item.precio * item.cantidad}));   
 const total = precioPorCantidad.reduce((prev, next) => prev + next.precio, 0);

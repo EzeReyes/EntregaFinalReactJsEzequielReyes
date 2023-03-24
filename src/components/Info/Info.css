@@ -30,11 +30,20 @@
     display: flex;
     margin: 5rem 2rem;
     align-items: center;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
 }
 
 .secondTitle {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin: 5rem;
+}
+
+.parrafSeconTitle{
+    text-align: justify;
+    font-size: 2rem;
+    font-weight: 300;
 }

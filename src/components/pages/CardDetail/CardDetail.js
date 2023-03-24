@@ -53,7 +53,7 @@ let { id } = useParams();
         </div>
         ) : 
         <div key={data.id}>
-        <h1>Detalle del producto seleccionado:</h1>
+        <h1 className="cardDetailTitulo">Detalle del producto seleccionado:</h1>
     <div className="Container">
         <div>
         <Card className="cardProducts" sx={{ maxWidth: 400 }}>

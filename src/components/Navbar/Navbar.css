@@ -9,3 +9,21 @@
     height: 6rem;
     padding: 1rem 0;
     }
+
+    .logo {
+        width: 70px;
+    }
+
+    .logo:hover {
+        transform:rotateZ(50deg);
+    }
+
+    a {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.459);
+    }
+
+    a:hover {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }

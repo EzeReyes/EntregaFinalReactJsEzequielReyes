@@ -1,3 +1,11 @@
+.cardDetailTitulo {
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 .Container {
     display: flex;
     flex-direction: row;
@@ -14,6 +22,15 @@
     border-radius: 10px;
     background-color: #a52a2a52;
     padding: 1rem;
+}
+
+.buttonComprar {
+    margin: 2rem;
+    background-color: #ffffff;
+    height: 2rem;
+    padding: 0.2rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
 }
 
 .Price {

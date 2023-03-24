@@ -39,8 +39,8 @@ const FormBuy = () => {
   };
 
   return (
-    <div className="ContainerPrincipal">
-      <h1>Finalizar Compra</h1>
+    <>
+      <h1 className="FormTitulo">Finalizar Compra</h1>
       <form className="FormContainer" onSubmit={handleOnSubmit}>
         <TextField className="TextField"
           placeholder="Ingrese su nombre"
@@ -66,7 +66,7 @@ const FormBuy = () => {
         <button className="btnASendAction" onClick={()=> clear()}>Send</button>
       </form>
       {purchaseID ?<MessageSuccess purchaseID={purchaseID}/> : null}
-    </div>
+    </>
   );
 };
 
