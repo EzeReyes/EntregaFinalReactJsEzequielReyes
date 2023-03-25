@@ -21,7 +21,7 @@ const Navbar = () => {
           title={logoImage}
           to="/"
 />
-      <ProductosPorTipo/>
+          <ProductosPorTipo/>
           <ElementsNavbar
             title="ABOUT"
             to="/about"

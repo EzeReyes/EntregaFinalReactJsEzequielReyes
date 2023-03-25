@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 import { ItemsContext } from "../../itemContext";
 import { useContext } from "react";
 import Spinner from "../Spinner/Spinner";
+// import ButtonCera from "./Buttons/ButtonCera";
+// import ButtonGel from "./Buttons/ButtonOtros";
+// import ButtonTodos from "./Buttons/ButtonTodos";
+// import ButtonPomada from "./Buttons/ButtonPomada";
+
 
 const CardListComponent = () => {
 
@@ -28,6 +33,12 @@ card.map ((user) => {
 
 return (
     <>
+    <div className="btnContainer">
+    {/* <ButtonTodos/>
+        <ButtonCera/>
+    <ButtonPomada/>
+    <ButtonGel/> */}
+    </div>
     <div className="containerProducts">
     {mapear(items)}
     </div>
