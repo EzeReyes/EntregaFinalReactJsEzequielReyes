@@ -3,6 +3,7 @@ import { cartContext } from "../../cartContext";
 import ElementsNavbar from "./ElementsNavbar";
 import CartWidget from "./CartWidget";
 import "./Navbar.css"
+import ProductosPorTipo from "../ProductosPorTipo/ProductosPorTipo";
 const logoImage = <img className="logo" src="https://dnp4fok4drjmm.cloudfront.net/pages/altagama/715_c1e324db69601a300f8cc33bc9357352.png" alt="logo"/>;
 
 
@@ -20,6 +21,7 @@ const Navbar = () => {
           title={logoImage}
           to="/"
 />
+      <ProductosPorTipo/>
           <ElementsNavbar
             title="ABOUT"
             to="/about"

@@ -19,6 +19,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { ItemsProvider } from "./itemContext";
 import { ItemsCartProvider } from "./cartContext";
+import Productos from "./components/pages/Productos/Productos";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/detail/:id" element={<CardDetail/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/FinishBuy" element={<FinishBuy/>}/>
+        <Route path="/productos/:tipo" element={<Productos/>} />
         <Route path="*" element={<Error/>} />
       </Routes>
       <Footer/>

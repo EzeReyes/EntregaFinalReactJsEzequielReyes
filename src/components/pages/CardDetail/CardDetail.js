@@ -45,8 +45,6 @@ let { id } = useParams();
         // eslint-disable-next-line react-hooks/exhaustive-deps
         },[id]);
 
-        // FUNCION QUE SE UTILIZA PARA RENDERIZAR LA CANTIDAD DE PRODUCTOS A RESTAR ANTES DE EFECTUAR LA COMPRA
-
     return (user.map((data) => { return ( 
         isLoading ? ( <div key={data.id} className="Spinner">
         <Spinner/>
